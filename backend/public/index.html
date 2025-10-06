@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Registration</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="container">
+      <section class="card">
+        <div class="card-left">
+          <h1>Student Registration Form</h1>
+          <p class="lead">Enter your details below to register.</p>
+
+          <form id="studentForm" autocomplete="on">
+            <div class="grid">
+              <div class="field">
+                <label for="name">Full Name</label>
+                <input id="name" name="name" type="text" required minlength="3" />
+              </div>
+
+              <div class="field">
+                <label for="roll">Roll Number</label>
+                <input id="roll" name="roll" type="text" required />
+              </div>
+
+              <div class="field">
+                <label for="email">Email</label>
+                <input id="email" name="email" type="email" required />
+              </div>
+
+              <div class="field">
+                <label for="phone">Phone</label>
+                <input id="phone" name="phone" type="tel" pattern="[0-9]{10}" placeholder="10 digits" />
+              </div>
+
+              <div class="field">
+                <label for="course">Course</label>
+                <input id="course" name="course" type="text" required />
+              </div>
+
+              <div class="field">
+                <label for="year">Year</label>
+                <select id="year" name="year" required>
+                  <option value="">Select Year</option>
+                  <option>1</option>
+                  <option>2</option>
+                  <option>3</option>
+                  <option>4</option>
+                </select>
+              </div>
+
+              <div class="field field-full">
+                <label for="address">Address</label>
+                <textarea id="address" name="address" rows="3"></textarea>
+              </div>
+            </div>
+
+            <div class="actions">
+              <button type="submit" class="btn-primary">Submit</button>
+              <button type="reset" class="btn-ghost">Reset</button>
+            </div>
+
+            <div id="message" role="status" aria-live="polite"></div>
+          </form>
+        </div>
+
+        <aside class="card-right">
+          <h2>Notes</h2>
+          <ul>
+            <li>All fields are validated before submission.</li>
+            <li>Roll number must be unique.</li>
+            <li>Responsive design for all devices.</li>
+          </ul>
+        </aside>
+      </section>
+
+      <footer class="footer">
+        <small>© 2025 Student DBMS Project | Built with ❤️</small>
+      </footer>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
